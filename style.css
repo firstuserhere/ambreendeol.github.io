@@ -1,13 +1,16 @@
+/* Import EB Garamond for headings */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&display=swap');
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  line-height: 1.6;
-  color: #000;
+  line-height: 1.85;
+  color: #333;
   margin: 0;
   padding: 0;
-  background-color: #fff;
-  font-size: 16px;
-  font-weight: 400; /* Normal font weight */
-  min-height: 100vh; /* Full viewport height */
+  background-color: #faf9f6;
+  font-size: 18px;
+  font-weight: 400;
+  min-height: 100vh;
 }
 
 .wrapper {
@@ -17,49 +20,74 @@ body {
 }
 
 .container {
-  max-width: 720px;
+  max-width: 680px;
   margin: 0 auto;
-  padding: 2.5rem 2rem;
+  padding: 6rem 2rem;
   flex: 1;
 }
 
 h1 {
-  font-size: 2.3rem;
-  font-weight: 600;
-  margin-bottom: 1.2rem;
-  margin-top: 1.5rem;
+  font-family: 'EB Garamond', serif;
+  font-size: 3.5rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+  margin-top: 2rem;
   line-height: 1.3;
   text-align: center;
+  color: #2c2c2c;
+}
+
+h2 {
+  font-family: 'EB Garamond', serif;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+  line-height: 1.4;
+  color: #2c2c2c;
 }
 
 p {
-  font-size: 1.05rem;
-  margin-bottom: 1.25rem;
-  line-height: 1.7;
-  font-weight: 400; /* Normal font weight for paragraphs */
+  font-size: 18px;
+  margin-bottom: 1.5rem;
+  line-height: 1.85;
+  font-weight: 400;
+  color: #333;
 }
 
 a {
-  color: #0000EE;
-  text-decoration: none;
+  color: #8b7355;
+  text-decoration: underline;
+  transition: color 0.2s ease;
 }
 
 a:hover {
-  text-decoration: underline;
+  color: #6b5a45;
 }
 
 /* Add spacing between major content sections */
 p + p {
-  margin-top: 0.9rem;
+  margin-top: 1.2rem;
 }
 
 /* Talks page specific styling */
 .talks-list {
-  margin: 2rem 0;
+  margin: 4rem 0;
 }
 
 .talk-item {
-  margin-bottom: 1.5rem;
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #d4c4aa;
+  transition: transform 0.2s ease;
+}
+
+.talk-item:last-child {
+  border-bottom: none;
+}
+
+.talk-item:hover {
+  transform: translateX(3px);
 }
 
 .talk-item p {
@@ -68,34 +96,67 @@ p + p {
 
 .talk-item strong {
   font-weight: 600;
+  color: #2c2c2c;
+}
+
+.talk-item a {
+  text-decoration: none;
+  color: #8b7355;
+  transition: color 0.2s ease;
+}
+
+.talk-item a:hover {
+  color: #6b5a45;
+  text-decoration: underline;
 }
 
 .contact-footer {
   margin-top: auto;
-  padding: 1.5rem 0;
-  border-top: 1px solid #eee;
-  font-size: 0.9rem;
-  color: #555;
+  padding: 2rem 0;
+  border-top: 1px solid #d4c4aa;
+  font-size: 0.95rem;
+  color: #6b5a45;
   width: 100%;
 }
 
 .contact-footer p {
-  font-size: 0.8rem;
-  line-height: 1.4;
+  font-size: 0.9rem;
+  line-height: 1.6;
   text-align: center;
   margin-bottom: 0;
-  color: #777;
+  color: #8b7355;
 }
 
 .contact-footer a {
-  color: #555;
+  color: #8b7355;
+  text-decoration: underline;
+  transition: color 0.2s ease;
 }
 
 .contact-footer a:hover {
-  color: #000;
+  color: #6b5a45;
 }
 
 .contact-footer .container {
   padding-top: 0;
   padding-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 4rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  p {
+    font-size: 17px;
+  }
 }
